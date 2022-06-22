@@ -14,7 +14,8 @@ let supplyChange = [ 3, 5, -6, 0, 7, 11];
 console.log('2. Array of supplyChanges:', supplyChange);
 
 // 3. Console log the value of the second item in the 'supplyChanges' array
-console.log('3. Second supplyChange is:', supplyChange =[1]);
+console.log('3. Second supplyChange is:', supplyChange.at(1));
+
 
 // 4. The last item was added by mistake. Remove it from the 'supplyChanges' 
 //    array & console.log the value removed.
@@ -30,16 +31,18 @@ console.log('5. Adding 25 to supplyChanges.', supplyChange);
 //    - if it is a positive number (greater than 0), log 'Added x parts.' 
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
-
-//for (let index = 0; index < supplyChange.length; index++) {
-  //  let partsAdded = 
-    //if (index) {
-        //console.log('added x parts', );;
-   // }
-    
-//}
 console.log('6. Showing supplyChanges...');
 
+for (let index = 0; index < supplyChange.length; index++) {
+    let partsAdded = supplyChange [index]
+    if (partsAdded > 0) {
+      console.log('Added', partsAdded, 'parts');
+    } else if (partsAdded === 0) {
+      console.log('no parts added');
+    } else if (partsAdded < 0) {
+      console.log ('Removed', Math.abs(partsAdded),'parts');
+    }
+}
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
